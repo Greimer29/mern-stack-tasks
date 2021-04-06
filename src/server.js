@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan')
+const path = require('path');
 const app = express();
 
 
@@ -14,7 +15,7 @@ app.use(express.json());
 app.use('/api/task', require('./routes/task.routes'));
 
 //static files
-
+app.use(express.static(path.join(__dirname, 'public')))
 
 //starting da server bitch!!
 app.listen(app.get('port'), () => {
