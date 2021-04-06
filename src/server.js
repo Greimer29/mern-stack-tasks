@@ -1,6 +1,20 @@
 const express = require('express');
 const app = express();
 
-app.listen(3000, () => {
-    console.log(`Server listen in da port 3000`);
+
+//settings
+app.set('port', process.env.PORT || 3000);
+
+//middlewares
+
+
+//routes
+
+
+//static files
+
+
+//starting da server bitch!!
+app.listen(app.get('port'), () => {
+    console.log(`Server listen in da port: ${app.get('port')}`);
 })
