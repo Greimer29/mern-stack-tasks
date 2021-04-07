@@ -16,4 +16,11 @@ router.post('/', async(req, res) => {
     res.json({ status: 'Task saved' });
 });
 
+router.put('/:id', async(req, res) => {
+    const { titulo, descripcion } = req.body;
+    const newTask = { titulo, descripcion };
+    await Task.findByIdAndUpdate(req.params.id, newTask);
+    res.json({ status: 'Task Upload' })
+})
+
 module.exports = router;
