@@ -1,12 +1,7 @@
-alert('Hello Fucking world');
 
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-class App extends Component {
-    render(){
-        return <h1> You are so beatufill little sanada bitch </h1>
-    }
-}
+import App from './App';
 
 render(<App/> , document.getElementById('app'));
